@@ -28,7 +28,7 @@ SECRET_KEY =  os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["8000-gambit1583-djangoblog-p5esrqo7fvw.ws.codeinstitute-ide.net",'.herokuapp.com',]
+ALLOWED_HOSTS = ["8000-gambit1583-djangoblog-p5esrqo7fvw.ws.codeinstitute-ide.net", "8000-gambit1583-djangoblog-p5esrqo7fvw.ws.codeinstitute-ide.net", '.herokuapp.com',]
 
 
 # Application definition
@@ -87,6 +87,11 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get('DATABASE_URL', 'postgres://uqppfw1kmiy:Z3fIkIO4i58e@ep-gentle-mountain-a23bxz6h-pooler.eu-central-1.aws.neon.tech/think_doing_cleat_511832'))
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.codeinstitute-ide.net/",
+    "https://*.herokuapp.com"
+]
 
 
 # Password validation
